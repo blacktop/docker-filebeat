@@ -8,7 +8,7 @@
 
 ## Why 🤔
 
-This is initially focused on supporting the [filebeat](https://github.com/elastic/beats/tree/7.0/x-pack/filebeat/module/filebeat) filebeats module.
+This is initially focused on supporting the [Zeek](https://github.com/elastic/beats/tree/master/x-pack/filebeat/module/zeek) filebeats module.
 
 I will add others if there is any demand or need later.
 
