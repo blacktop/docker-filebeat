@@ -1,12 +1,14 @@
 # docker-filebeat
 
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/filebeat.svg)](https://hub.docker.com/r/blacktop/filebeat/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/filebeat.svg)](https://hub.docker.com/r/blacktop/filebeat/) [![Docker Image](https://img.shields.io/badge/docker%20image-48.3MB-blue.svg)](https://hub.docker.com/r/blacktop/filebeat/)
+
 > Alpine Linux based [Filebeat](https://github.com/elastic/beats/tree/master/filebeat) Docker Image
 
 ---
 
 ## Why 🤔
 
-This is initially focused on supporting the [Zeek](https://github.com/elastic/beats/tree/7.0/x-pack/filebeat/module/zeek) filebeats module.
+This is initially focused on supporting the [filebeat](https://github.com/elastic/beats/tree/7.0/x-pack/filebeat/module/filebeat) filebeats module.
 
 I will add others if there is any demand or need later.
 
@@ -20,8 +22,8 @@ I will add others if there is any demand or need later.
 $ docker images
 
 REPOSITORY               TAG          SIZE
-blacktop/filebeat        latest       168MB
-blacktop/filebeat        7.0.0        168MB
+blacktop/filebeat        latest       48.3MB
+blacktop/filebeat        7.0.0        48.3MB
 ```
 
 ## Getting Started
@@ -35,7 +37,7 @@ $ docker run --init --rm -it -v `pwd`:/pcap \
                              --link kibana \
                              --link elasticsearch \
                              blacktop/filebeat -e
-$ docker run --init --rm -it -v `pwd`:/pcap blacktop/zeek:elastic -r your.pcap local
+$ docker run --init --rm -it -v `pwd`:/pcap blacktop/filebeat:elastic -r your.pcap local
 ```
 
 ## Issues
