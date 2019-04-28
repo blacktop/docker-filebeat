@@ -6,7 +6,7 @@
 
 ## Why 🤔
 
-This is initially focused on supporting the Zeek filebeats module.
+This is initially focused on supporting the [Zeek](https://github.com/elastic/beats/tree/7.0/x-pack/filebeat/module/zeek) filebeats module.
 
 I will add others if there is any demand or need later.
 
@@ -27,7 +27,9 @@ blacktop/filebeat        7.0.0        168MB
 ## Getting Started
 
 ```bash
-$
+$ docker run --init -d --name elasticsearch -p 9200:9200 blacktop/elasticsearch
+$ docker run --init -d --name kibana --link elasticsearch -p 5601:5601 blacktop/kibana
+$ docker run --init --rm -it --link kibana --link elasticsearch blacktop/filebeat -e
 ```
 
 ## Issues
