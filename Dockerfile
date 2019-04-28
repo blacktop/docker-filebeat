@@ -4,7 +4,7 @@ LABEL maintainer "https://github.com/blacktop"
 
 ARG VERSION
 
-RUN apk add --no-cache libc6-compat
+RUN apk add --no-cache libc6-compat curl
 
 RUN \
   cd /tmp \
@@ -13,6 +13,8 @@ RUN \
   && mv filebeat-${VERSION}-linux-x86_64 /usr/share/filebeat \
   && mkdir /usr/share/filebeat/logs /usr/share/filebeat/data \
   && rm /tmp/*
+
+ENV PATH $PATH:/usr/share/filebeat
 
 COPY config /usr/share/filebeat
 
