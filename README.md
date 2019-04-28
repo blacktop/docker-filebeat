@@ -26,10 +26,16 @@ blacktop/filebeat        7.0.0        168MB
 
 ## Getting Started
 
+Download or create `your.pcap` in current directory
+
 ```bash
 $ docker run --init -d --name elasticsearch -p 9200:9200 blacktop/elasticsearch
 $ docker run --init -d --name kibana --link elasticsearch -p 5601:5601 blacktop/kibana
-$ docker run --init --rm -it --link kibana --link elasticsearch blacktop/filebeat -e
+$ docker run --init --rm -it -v `pwd`:/pcap \
+                             --link kibana \
+                             --link elasticsearch \
+                             blacktop/filebeat -e
+$ docker run --init --rm -it -v `pwd`:/pcap blacktop/zeek:elastic -r your.pcap local
 ```
 
 ## Issues
