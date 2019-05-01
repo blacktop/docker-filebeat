@@ -31,6 +31,11 @@ tar: ## Export tar of docker image
 
 .PHONY: push
 push: build ## Push docker image to docker registry
+ifeq "$(BUILD)" "$(LATEST)"
+	@echo "===> Pushing $(ORG)/$(NAME):latest to docker hub..."
+	@docker tag $(ORG)/$(NAME):$(BUILD) $(ORG)/$(NAME):latest
+	@docker push $(ORG)/$(NAME):latest
+endif
 	@echo "===> Pushing $(ORG)/$(NAME):$(BUILD) to docker hub..."
 	@docker push $(ORG)/$(NAME):$(BUILD)
 
