@@ -1,6 +1,6 @@
 # docker-filebeat
 
-[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/filebeat.svg)](https://hub.docker.com/r/blacktop/filebeat/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/filebeat.svg)](https://hub.docker.com/r/blacktop/filebeat/) [![Docker Image](https://img.shields.io/badge/docker%20image-48.3MB-blue.svg)](https://hub.docker.com/r/blacktop/filebeat/)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/filebeat.svg)](https://hub.docker.com/r/blacktop/filebeat/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/filebeat.svg)](https://hub.docker.com/r/blacktop/filebeat/) [![Docker Image](https://img.shields.io/badge/docker%20image-98MB-blue.svg)](https://hub.docker.com/r/blacktop/filebeat/)
 
 > Alpine Linux based [Filebeat](https://github.com/elastic/beats/tree/master/filebeat) Docker Image
 
@@ -14,7 +14,7 @@ I will add others if there is any demand or need later.
 
 ## Dependencies
 
-- [alpine:3.9](https://hub.docker.com/_/alpine/)
+- [alpine:3.10](https://hub.docker.com/_/alpine/)
 
 ## Image Tags
 
@@ -22,7 +22,8 @@ I will add others if there is any demand or need later.
 $ docker images
 
 REPOSITORY               TAG          SIZE
-blacktop/filebeat        latest       48.3MB
+blacktop/filebeat        latest       98MB
+blacktop/filebeat        7.3,1        98MB
 blacktop/filebeat        7.0.0        48.3MB
 ```
 
