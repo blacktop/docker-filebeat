@@ -23,7 +23,7 @@ tags:
 	docker images --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}" $(ORG)/$(NAME)
 
 test: ## Test docker image
-	@docker run --rm $(ORG)/$(NAME):$(BUILD) --version
+	@docker run --init -it --rm $(ORG)/$(NAME):$(BUILD) --version
 
 .PHONY: tar
 tar: ## Export tar of docker image
