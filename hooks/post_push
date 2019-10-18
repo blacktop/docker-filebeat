@@ -2,6 +2,7 @@
 
 set -e
 
+VERSION=$(cat LATEST)
 TAGS=($VERSION 7)
 
 for TAG in "${TAGS[@]}"; do
