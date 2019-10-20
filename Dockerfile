@@ -8,8 +8,8 @@ RUN apk add --no-cache libc6-compat curl
 
 RUN \
   cd /tmp \
-  && wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-oss-${VERSION}-linux-x86_64.tar.gz \
-  && tar xzvf filebeat-oss-${VERSION}-linux-x86_64.tar.gz \
+  && wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-${VERSION}-linux-x86_64.tar.gz \
+  && tar xzvf filebeat-${VERSION}-linux-x86_64.tar.gz \
   && mv filebeat-${VERSION}-linux-x86_64 /usr/share/filebeat \
   && mkdir /usr/share/filebeat/logs /usr/share/filebeat/data \
   && rm /tmp/*
