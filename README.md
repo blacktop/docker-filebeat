@@ -22,7 +22,8 @@ I will add others if there is any demand or need later.
 $ docker images
 
 REPOSITORY               TAG          SIZE
-blacktop/filebeat        latest       98MB
+blacktop/filebeat        latest       68MB
+blacktop/filebeat        7.4.0        68MB
 blacktop/filebeat        7.3,1        98MB
 blacktop/filebeat        7.0.0        48.3MB
 ```
