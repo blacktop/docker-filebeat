@@ -46,16 +46,12 @@ $ docker run --init --rm -it -v `pwd`:/pcap blacktop/filebeat:elastic -r your.pc
 
 Find a bug? Want more features? Find something missing in the documentation? Let me know! Please don't hesitate to [file an issue](https://github.com/blacktop/docker-filebeat/issues/new) and I'll get right on it.
 
-## CHANGELOG
-
-See [`CHANGELOG.md`](https://github.com/blacktop/docker-filebeat/blob/master/CHANGELOG.md)
-
 ## Contributing
 
 [See all contributors on GitHub](https://github.com/blacktop/docker-filebeat/graphs/contributors).
 
-Please update the [CHANGELOG.md](https://github.com/blacktop/docker-filebeat/blob/master/CHANGELOG.md) and submit a [Pull Request on GitHub](https://help.github.com/articles/using-pull-requests/).
+Please submit a [Pull Request on GitHub](https://help.github.com/articles/using-pull-requests/).
 
 ## License
 
-MIT Copyright (c) 2019 **blacktop**
+MIT Copyright (c) 2019-2020 **blacktop**

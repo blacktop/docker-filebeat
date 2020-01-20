@@ -13,6 +13,8 @@ filebeat.modules:
   # All logs
   connection:
     enabled: true
+    var.paths:
+      - /pcap/conn*.log    
   dns:
     enabled: true
     var.paths:
