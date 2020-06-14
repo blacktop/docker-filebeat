@@ -1,6 +1,6 @@
 # docker-filebeat
 
-[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/filebeat.svg)](https://hub.docker.com/r/blacktop/filebeat/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/filebeat.svg)](https://hub.docker.com/r/blacktop/filebeat/) [![Docker Image](https://img.shields.io/badge/docker%20image-87.1MB-blue.svg)](https://hub.docker.com/r/blacktop/filebeat/)
+[![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org) [![Docker Stars](https://img.shields.io/docker/stars/blacktop/filebeat.svg)](https://hub.docker.com/r/blacktop/filebeat/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacktop/filebeat.svg)](https://hub.docker.com/r/blacktop/filebeat/) [![Docker Image](https://img.shields.io/badge/docker%20image-97.2MB-blue.svg)](https://hub.docker.com/r/blacktop/filebeat/)
 
 > Alpine Linux based [Filebeat](https://github.com/elastic/beats/tree/master/filebeat) Docker Image
 
@@ -23,6 +23,7 @@ $ docker images
 
 REPOSITORY               TAG          SIZE
 blacktop/filebeat        latest       68MB
+blacktop/filebeat        7.7.1        68MB
 blacktop/filebeat        7.6.1        68MB
 blacktop/filebeat        7.4.0        68MB
 blacktop/filebeat        7.3,1        98MB
