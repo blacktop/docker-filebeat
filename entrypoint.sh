@@ -90,13 +90,16 @@ waitForElasticsearch() {
   exit 1
 }
 
-# Wait for. Params: host, port, service
-waitFor() {
-    echo -n "===> Waiting for ${2}(${1}) to start..."
+# Wait for kibana to start
+waitForKibana() {
+    echo -n "===> Waiting for kibana to start..."
     i=1
     while [ $i -le 20 ]; do
-        if nc -vz ${1} 2>/dev/null; then
-            echo "${2} is ready!"
+
+        status=$(curl --silent -XGET http://localhost:5601/api/status | jq -r '.status.overall.state')
+
+        if [[ "$status" = "green" ]] ; then
+            echo "kibana is ready!"
             return 0
         fi
 
@@ -113,7 +116,7 @@ waitFor() {
 if [[ -z $1 ]] || [[ ${1:0:1} == '-' ]] ; then
   waitForElasticsearch
   # geoipInfo
-  waitFor ${KIBANA_HOST:-kibana:5601} Kibana
+  waitForKibana ${KIBANA_HOST:-kibana:5601}
   echo "===> Setting up filebeat..."
   filebeat setup --modules zeek -e -E 'setup.dashboards.enabled=true'
   echo "===> Starting filebeat..."

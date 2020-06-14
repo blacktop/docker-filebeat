@@ -4,7 +4,7 @@ LABEL maintainer "https://github.com/blacktop"
 
 ARG VERSION
 
-RUN apk add --no-cache libc6-compat curl
+RUN apk add --no-cache libc6-compat curl jq
 
 RUN \
   cd /tmp \
